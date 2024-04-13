@@ -50,7 +50,7 @@ local function initializePedModel(model, data)
 end
 
 local function skyCam(bool)
-    TriggerEvent('qb-weathersync:client:DisableSync')
+    TriggerEvent('cd_easytime:PauseSync', true)
     if bool then
         DoScreenFadeIn(1000)
         SetTimecycleModifier('hud_def_blur')
@@ -110,7 +110,7 @@ RegisterNetEvent('qb-multicharacter:client:closeNUIdefault', function() -- This 
     SetEntityVisible(PlayerPedId(), true)
     Wait(500)
     DoScreenFadeIn(250)
-    TriggerEvent('qb-weathersync:client:EnableSync')
+    TriggerEvent('cd_easytime:PauseSync', false)
     TriggerEvent('qb-clothes:client:CreateFirstCharacter')
 end)
 
