@@ -35,5 +35,4 @@ files {
 
 dependencies {
     'qb-core',
-    'qb-spawn'
 }
